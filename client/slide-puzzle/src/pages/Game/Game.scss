@@ -1,0 +1,25 @@
+.main {
+   
+    background-color: #456782;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    &__puzzle {
+
+        height: 700px;
+        width: 700px;
+        border-radius: 8px;
+        margin-top: 150px;
+       
+    }
+ 
+}
+
+.link {
+    text-decoration: none;
+    color: #181711;
+}
+
