@@ -10,32 +10,30 @@ import {Route,Switch, BrowserRouter as Router} from "react-router-dom";
 
 class App extends React.Component {
 
-// state = {
-//   puzzlePic:[]
-// }
+state = {
+  puzzlePic:[1]
+}
 
 
-// componentDidMount(){
-// axios.get(" https://api.thecatapi.com/v1/images/search")
-// .then(res=>{
-//   this.setState({puzzlePic:res.data[0].url})
-//    console.log(res.data[0].url, "photoURL from app.js")
-   
-// })
-// }
+componentDidMount(){
+axios.get(" https://api.thecatapi.com/v1/images/search")
+.then(res=>{
+  this.setState({puzzlePic:res.data})
+})
+}
 
 
   render() {
     return( 
       
-        <Switch>
-          <Route path="/" exact component={Main}/> 
-          <Route path="/manywaystocry" component={Game}  >
-          
-          </Route>
-
-          <Route path="/manywaystocry" component={Bridge}/>
-        </Switch> 
+      <Game puzzleImg={this.state.puzzlePic}/>
+  
+        // <Switch>
+        //   <Route path="/" exact component={Main}/> 
+        //   <Route path="/manywaystocry" component={Game}  >
+        //   </Route>
+        //   <Route path="/manywaystocry" component={Bridge}/>
+        // </Switch> 
  
       
     )
