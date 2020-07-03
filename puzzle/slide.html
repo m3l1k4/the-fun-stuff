@@ -125,37 +125,80 @@
         function swapTile(row, column, canvasName) {
             console.log(canvasName,row,column)
 
-            if (column < 300) {
+         
+
+            if (column == 0) {
                 if (document.getElementById(canvasName + row + (column + 150)).className == "blank") {
                     slide(canvasName ,row , column,  row ,(column + 150));
-                    console.log("potato")
-                    return;
+                console.log("right-check")
+                    
                 }
             }
             //Checking if white tile on the left
-            if (column > 0) {
+            if (column == 150) {
                 if (document.getElementById(canvasName + row + (column - 150)).className == "blank") {
                     slide(canvasName , row , column, row , (column - 150));
-                    return;
+                    console.log("left-check")
+                    
+
+                    
+                }
+
+                else if (document.getElementById(canvasName + row + (column + 150)).className == "blank") {
+                    slide(canvasName , row , column, row , (column + 150));
+                    console.log("left-check")
+                 
+
+                    
+                }
+
+            }
+
+            if (column == 300) {
+                if (document.getElementById(canvasName + row + (column - 150)).className == "blank") {
+                    slide(canvasName , row , column, row , (column - 150));
+                    console.log("left-check")
+                  
+
+                    
                 }
             }
+
+
             //Checking if white tile is above
-            if (row > 0) {
+            if (row == 150) {
                 if (document.getElementById(canvasName + (row - 150) + column).className == "blank") {
                     slide(canvasName , row , column , (row - 150) , column);
-                    return;
+                    console.log("up-check")
+              
                 }
+
+                else if(document.getElementById(canvasName + (row + 150) + column).className == "blank") {
+                    slide(canvasName , row , column , (row + 150) , column);
+                    console.log("up-check")
+                
+                }
+                
             }
             //Checking if white tile is below
-            if (row < 300) {
+            if (row == 300) {
+                if (document.getElementById(canvasName + (row - 150) + column).className == "blank") {
+                    slide(canvasName,row, column,(row - 150),column);
+                    console.log("down-check")
+                 
+                }
+            }
+
+            if (row == 0) {
                 if (document.getElementById(canvasName + (row + 150) + column).className == "blank") {
                     slide(canvasName,row, column,(row + 150),column);
-                    return;
+                    console.log("down-check")
+                 
                 }
             }
 
 
-
+return
 
         }
 
@@ -165,7 +208,7 @@
             let tileWidth=150;
             let img = document.getElementById("puzzleimg");
             let img2=document.getElementById("blankimg");
-            console.log(canvas, "&", canvas)
+           
 
             let canAID= canvas+rowA+columnA;
             let canBID=canvas+rowB+columnB;
