@@ -26,14 +26,15 @@ axios.get(" https://api.thecatapi.com/v1/images/search")
   render() {
     return( 
       
-      <Game puzzleImg={this.state.puzzlePic}/>
   
-        // <Switch>
-        //   <Route path="/" exact component={Main}/> 
-        //   <Route path="/manywaystocry" component={Game}  >
-        //   </Route>
-        //   <Route path="/manywaystocry" component={Bridge}/>
-        // </Switch> 
+  
+        <Switch>
+          <Route path="/" exact component={Main}/> 
+          <Route path="/onewaytopuzzle"   >
+        <Game puzzleImg={this.state.puzzlePic}/>
+          </Route>
+          <Route path="/manywaystocry" component={Bridge}/>
+        </Switch> 
  
       
     )
