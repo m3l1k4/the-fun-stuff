@@ -20,13 +20,18 @@ export default function Game({ puzzleImg }) {
                     <h1>Move the pieces</h1>
 
                 </div>
+
+
                 <div className="main">
                     <Link className="link" to="/"><h3>back to Main</h3></Link>
 
 
-
+                    <div className="orgIMG">
                     <img className="main__puzzle" src={photo.url}></img>
+                    </div>
 
+                 
+                    
                     <div className= "puzzle"  >
 
                         <div id="table" className="puzzle-div" >

@@ -1,11 +1,12 @@
 .main {
    
     background-color: paleturquoise;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    // flex-wrap: wrap;
 
     &__puzzle {
 
@@ -57,4 +58,18 @@
 
   .puzzle-div{
     display: table;  
+  }
+
+
+  .orgIMG{
+    width: 100px;
+    height: 100px;
+    
+  }
+
+  .main__puzzle{
+    width: 100px;
+    height: 100px;
+margin-bottom: 2rem;
+    
   }
