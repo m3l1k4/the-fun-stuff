@@ -27,15 +27,15 @@
     <p>Canvas:</p>
 
     <div class= "puzzle-canvas">
-    <canvas id="canvasA" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasB" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasC" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasD" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasE" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasF" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasG" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-    <canvas id="canvasH" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
-
+    <canvas id="canvasA" width="150" height="150" style="border:1px solid #d3d3d3;"   onClick="swapTile(1,1, 'canvasA');"></canvas>
+    <canvas id="canvasB" width="150" height="150" style="border:1px solid #d3d3d3;"    onClick="swapTile(1,2, 'canvasB');" ></canvas>
+    <canvas id="canvasC" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(1,3, 'canvasC');"></canvas>
+    <canvas id="canvasD" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,1, 'canvasD');"></canvas>
+    <canvas id="canvasE" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,2, 'canvasE');"></canvas>
+    <canvas id="canvasF" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,3, 'canvasF');"></canvas>
+    <canvas id="canvasG" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,1, 'canvasG');"></canvas>
+    <canvas id="canvasH" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,2,'canvasH');"></canvas>
+    <canvas id="canvasI" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,3, 'canvasI');"></canvas>
 </div>
    <script>
 
@@ -48,32 +48,32 @@
 let aX=0;
 let aY=0;
 
-let bX = 0
-let bY  = 150;
+let dX = 0
+let dY  = 150;
 
- let cX = 0;
- let cY = 300;
+ let gX = 0;
+ let gY = 300;
 
- let dX = 150;
- let dY = 0;
-
-
- let eX = 300;
- let eY = 0;
+ let bX = 150;
+ let bY = 0;
 
 
-let fX = 150;
-let fY  = 150;
-
-let gX = 300;
-let gY = 150;
-
- let hX = 300;
- let hY = 300;
+ let cX = 300;
+ let cY = 0;
 
 
-let iX  = 150;
-let iY = 300;
+let eX = 150;
+let eY  = 150;
+
+let fX = 300;
+let fY = 150;
+
+ let iX = 300;
+ let iY = 300;
+
+
+let hX  = 150;
+let hY = 300;
 
 
 
@@ -111,10 +111,11 @@ let iY = 300;
     }
 
 
-    document.getElementById('canvasA').addEventListener("click", function (event) {
-    event.preventDefault();
-   alert("potato");});
-
+   function swapTile(row,column,canvasName){
+console.log(row,column,canvasName)
+let a= document.getElementById(canvasName);
+// console.log(a)
+   }
     </script>
     
     
