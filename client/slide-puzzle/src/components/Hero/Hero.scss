@@ -1,5 +1,6 @@
-
+@import "../../Variables/_fonts";
 .hero {
+
 
     display: flex;
     flex-direction: column;
@@ -7,12 +8,13 @@
     align-items: center;
     background-color: #ffee00;
     height: 100vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 
     &__button {
 
         margin-top: 440px;
         margin-right: 180px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
         display: flex;
         align-items: center;
@@ -31,8 +33,8 @@
     }
 
     &__text {
-        font-size: 46px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 74px; 
+        font-family: 'Spongeboy Me Bob';
         margin-top: 295px;
         color: #9500f8;
     }
