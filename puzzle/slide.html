@@ -8,11 +8,11 @@
     <meta title="author" content="Melika">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
 </head>
 
 <style>
-    .puzzle-canvas{
+    .puzzle-canvas {
         width: 500px;
         height: 500px;
         display: flex;
@@ -22,120 +22,168 @@
 
 <body>
     <p>Image to use:</p>
-    <img type="image" id="scream" width="150" height="150" src="id.png" >
-   
+    <img type="image" id="puzzleimg" width="150" height="150" src="id.png">
+    <img type="image" id="blankimg" width="150" height="150" src="blank.jpg">
+
     <p>Canvas:</p>
 
-    <div class= "puzzle-canvas">
-    <canvas id="canvas11" width="150" height="150" style="border:1px solid #d3d3d3;"   onClick="swapTile(1,1, 'canvas');"></canvas>
-    <canvas id="canvas12" width="150" height="150" style="border:1px solid #d3d3d3;"    onClick="swapTile(1,2, 'canvas');" ></canvas>
-    <canvas id="canvas13" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(1,3, 'canvas');"></canvas>
-    <canvas id="canvas21" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,1, 'canvas');"></canvas>
-    <canvas id="canvas22" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,2, 'canvas');"></canvas>
-    <canvas id="canvas23" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(2,3, 'canvas');"></canvas>
-    <canvas id="canvas31" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,1, 'canvas');"></canvas>
-    <canvas id="canvas32" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,2,'canvas');"></canvas>
-    <canvas id="canvas33" class="blank" width="150" height="150" style="border:1px solid #d3d3d3;" onClick="swapTile(3,3, 'canvas');"></canvas>
-</div>
-   <script>
-
-      
-
-
-    window.onload = function() {
-        const tileWidth="150";
-        const tileHeight="150";
-let aX=0;
-let aY=0;
-
-let dX = 0
-let dY  = 150;
-
- let gX = 0;
- let gY = 300;
-
- let bX = 150;
- let bY = 0;
-
-
- let cX = 300;
- let cY = 0;
-
-
-let eX = 150;
-let eY  = 150;
-
-let fX = 300;
-let fY = 150;
-
- let iX = 300;
- let iY = 300;
-
-
-let hX  = 150;
-let hY = 300;
+    <div class="puzzle-canvas">
+        <canvas id="canvas00" class="canvas00" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(0,0,'canvas');"></canvas>
+        <canvas id="canvas0150" class="canvas0150" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(0,150, 'canvas');"></canvas>
+        <canvas id="canvas0300" class="canvas0300" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(0,300, 'canvas');"></canvas>
+        <canvas id="canvas1500" class="canvas1500" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(150,0, 'canvas');"></canvas>
+        <canvas id="canvas150150" class="canvas150150" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(150,150, 'canvas');"></canvas>
+        <canvas id="canvas150300" class="canvas150300" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(150,300, 'canvas');"></canvas>
+        <canvas id="canvas3000" class="canvas3000" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(300,0, 'canvas');"></canvas>
+        <canvas id="canvas300150" class="canvas300150" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(300,150,'canvas');"></canvas>
+        <canvas id="canvas300300" class="blank" width="150" height="150" style="border:1px solid #d3d3d3;"
+            onClick="swapTile(300,300, 'canvas');"></canvas>
+    </div>
+    <script>
 
 
 
-      let canA = document.getElementById("canvas11");
-      let canB = document.getElementById("canvas12");
-      let canC = document.getElementById("canvas13");
-      let canD = document.getElementById("canvas21");
-      let canE = document.getElementById("canvas22");
-      let canF = document.getElementById("canvas23");
-      let canG = document.getElementById("canvas31");
-      let canH = document.getElementById("canvas32");
-    //   let canI = document.getElementById("canvasI");
+
+        window.onload = function () {
+            const tileWidth = "150";
+            const tileHeight = "150";
+            let aX = 0;
+            let aY = 0;
+
+            let dX = 0
+            let dY = 150;
+
+            let gX = 0;
+            let gY = 300;
+
+            let bX = 150;
+            let bY = 0;
 
 
-      let tileA = canA.getContext("2d");
-      let tileB= canB.getContext("2d");
-      let tileC= canC.getContext("2d");
-      let tileD= canD.getContext("2d");
-      let tileE= canE.getContext("2d");
-      let tileF= canF.getContext("2d");
-      let tileG= canG.getContext("2d");
-      let tileH= canH.getContext("2d");
-    //   let tileI= canI.getContext("2d");
-
-      let img = document.getElementById("scream");
-        tileA.drawImage(img, aX, aY, tileWidth, tileWidth, aX , aY, tileWidth, tileWidth);
-        tileB.drawImage(img, bX, bY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileC.drawImage(img, cX, cY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileD.drawImage(img, dX,dY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileE.drawImage(img, eX, eY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileF.drawImage(img, fX, fY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileG.drawImage(img, gX, gY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        tileH.drawImage(img, hX, hY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-        // tileI.drawImage(img, iX, iY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
-    }
+            let cX = 300;
+            let cY = 0;
 
 
-   function swapTile(row,column,canvasName){
-console.log(row,column,canvasName)
-let a= document.getElementById(canvasName);
-// console.log(a)
+            let eX = 150;
+            let eY = 150;
+
+            let fX = 300;
+            let fY = 150;
+
+            let iX = 300;
+            let iY = 300;
 
 
-var cell = document.getElementById(canvasName+row+column);
-console.log(cell)
-console.log(canvasName+row+(column+1))
-
-
-         if ( document.getElementById(canvasName+row+(column+1)).className=="blank") {
-           console.log("doot")
-         
-         }
-
-         else{ console.log("oooo")}
-       
+            let hX = 150;
+            let hY = 300;
 
 
 
-   }
+            let canA = document.getElementById("canvas00");
+            let canB = document.getElementById("canvas0150");
+            let canC = document.getElementById("canvas0300");
+            let canD = document.getElementById("canvas1500");
+            let canE = document.getElementById("canvas150150");
+            let canF = document.getElementById("canvas150300");
+            let canG = document.getElementById("canvas3000");
+            let canH = document.getElementById("canvas300150");
+             let canI = document.getElementById("canvas300300");
+
+
+            let tileA = canA.getContext("2d");
+            let tileB = canB.getContext("2d");
+            let tileC = canC.getContext("2d");
+            let tileD = canD.getContext("2d");
+            let tileE = canE.getContext("2d");
+            let tileF = canF.getContext("2d");
+            let tileG = canG.getContext("2d");
+            let tileH = canH.getContext("2d");
+            let tileI= canI.getContext("2d");
+
+            let img = document.getElementById("puzzleimg");
+            let img2=document.getElementById("blankimg");
+            tileA.drawImage(img, aX, aY, tileWidth, tileWidth, 0, 0, tileWidth, tileWidth);
+            tileB.drawImage(img, bX, bY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileC.drawImage(img, cX, cY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileD.drawImage(img, dX, dY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileE.drawImage(img, eX, eY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileF.drawImage(img, fX, fY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileG.drawImage(img, gX, gY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileH.drawImage(img, hX, hY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+            tileI.drawImage(img2, iX, iY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        }
+
+
+        function swapTile(row, column, canvasName) {
+            console.log(canvasName,row,column)
+
+            if (column < 300) {
+                if (document.getElementById(canvasName + row + (column + 150)).className == "blank") {
+                    slide(canvasName ,row , column,  row ,(column + 150));
+                    console.log("potato")
+                    return;
+                }
+            }
+            //Checking if white tile on the left
+            if (column > 0) {
+                if (document.getElementById(canvasName + row + (column - 150)).className == "blank") {
+                    slide(canvasName , row , column, row , (column - 150));
+                    return;
+                }
+            }
+            //Checking if white tile is above
+            if (row > 0) {
+                if (document.getElementById(canvasName + (row - 150) + column).className == "blank") {
+                    slide(canvasName , row , column , (row - 150) , column);
+                    return;
+                }
+            }
+            //Checking if white tile is below
+            if (row < 300) {
+                if (document.getElementById(canvasName + (row + 150) + column).className == "blank") {
+                    slide(canvasName,row, column,(row + 150),column);
+                    return;
+                }
+            }
+
+
+
+
+        }
+
+
+
+        function slide(canvas, rowA,columnA, rowB,columnB) {
+            let tileWidth=150;
+            let img = document.getElementById("puzzleimg");
+            let img2=document.getElementById("blankimg");
+            console.log(canvas, "&", canvas)
+
+            let canAID= canvas+rowA+columnA;
+            let canBID=canvas+rowB+columnB;
+            console.log(canAID, "canAID")
+
+            // var temp = document.getElementById(canvasA).className;
+            // document.getElementById(canvasA).className = document.getElementById(canvasB).className;
+            // document.getElementById(canvasB).className = temp;
+
+              let canA = document.getElementById(canAID).getContext("2d");
+             let canB = document.getElementById(canBID).getContext("2d");
+              canA.drawImage(img2, rowB, columnB, tileWidth, tileWidth, 0, 0, tileWidth, tileWidth);
+              canB.drawImage(img, rowA, columnA, tileWidth, tileWidth, 0, 0, tileWidth, tileWidth);
+
+        }
     </script>
-    
-    
+
+
 
 </body>
 <script src="slide.js"></script>
