@@ -11,18 +11,33 @@
     
 </head>
 
-
+<style>
+    .puzzle-canvas{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
 
 <body>
     <p>Image to use:</p>
-    <img id="scream" width="450" height="450" src="id.png" alt="The Scream">
-    
+    <img type="image" id="scream" width="150" height="150" src="id.png" >
+   
     <p>Canvas:</p>
-    <canvas id="myCanvas" width="450" height="450" style="border:1px solid #d3d3d3;" ">
-    Your browser does not support the HTML5 canvas tag.
-    </canvas>
-    
-    <script>
+
+    <div class= "puzzle-canvas">
+    <canvas id="canvasA" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasB" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasC" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasD" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasE" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasF" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasG" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+    <canvas id="canvasH" width="150" height="150" style="border:1px solid #d3d3d3;" ></canvas>
+
+</div>
+   <script>
 
       
 
@@ -30,30 +45,76 @@
     window.onload = function() {
         const tileWidth="150";
         const tileHeight="150";
+let aX=0;
+let aY=0;
+
+let bX = 0
+let bY  = 150;
+
+ let cX = 0;
+ let cY = 300;
+
+ let dX = 150;
+ let dY = 0;
 
 
-      let c = document.getElementById("myCanvas");
-      let tileA = c.getContext("2d");
-      let tileB= c.getContext("2d");
-      let tileC= c.getContext("2d");
-      let tileD= c.getContext("2d");
-      let tileE= c.getContext("2d");
-      let tileF= c.getContext("2d");
-      let tileG= c.getContext("2d");
-      let tileH= c.getContext("2d");
-      let tileI= c.getContext("2d");
+ let eX = 300;
+ let eY = 0;
+
+
+let fX = 150;
+let fY  = 150;
+
+let gX = 300;
+let gY = 150;
+
+ let hX = 300;
+ let hY = 300;
+
+
+let iX  = 150;
+let iY = 300;
+
+
+
+      let canA = document.getElementById("canvasA");
+      let canB = document.getElementById("canvasB");
+      let canC = document.getElementById("canvasC");
+      let canD = document.getElementById("canvasD");
+      let canE = document.getElementById("canvasE");
+      let canF = document.getElementById("canvasF");
+      let canG = document.getElementById("canvasG");
+      let canH = document.getElementById("canvasH");
+    //   let canI = document.getElementById("canvasI");
+
+
+      let tileA = canA.getContext("2d");
+      let tileB= canB.getContext("2d");
+      let tileC= canC.getContext("2d");
+      let tileD= canD.getContext("2d");
+      let tileE= canE.getContext("2d");
+      let tileF= canF.getContext("2d");
+      let tileG= canG.getContext("2d");
+      let tileH= canH.getContext("2d");
+    //   let tileI= canI.getContext("2d");
 
       let img = document.getElementById("scream");
-        tileA.drawImage(img, 0, 0, tileWidth, tileWidth, 0 , 0, tileWidth, tileWidth);
-        tileB.drawImage(img, 0, 150, tileWidth, tileHeight, 0, 150, tileWidth, tileHeight);
-        tileC.drawImage(img, 0, 300, tileWidth, tileHeight, 0, 300, tileWidth, tileHeight);
-        tileD.drawImage(img, 150,0, tileWidth, tileHeight, 150, 0, tileWidth, tileHeight);
-        tileE.drawImage(img, 300, 0, tileWidth, tileHeight, 300, 0, tileWidth, tileHeight);
-        tileF.drawImage(img, 150, 150, tileWidth, tileHeight, 150, 150, tileWidth, tileHeight);
-        tileG.drawImage(img, 300, 150, tileWidth, tileHeight, 300, 150, tileWidth, tileHeight);
-        tileH.drawImage(img, 300, 300, tileWidth, tileHeight, 300, 300, tileWidth, tileHeight);
-        tileI.drawImage(img, 150, 300, tileWidth, tileHeight, 0, 100, tileWidth, tileHeight);
+        tileA.drawImage(img, aX, aY, tileWidth, tileWidth, aX , aY, tileWidth, tileWidth);
+        tileB.drawImage(img, bX, bY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileC.drawImage(img, cX, cY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileD.drawImage(img, dX,dY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileE.drawImage(img, eX, eY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileF.drawImage(img, fX, fY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileG.drawImage(img, gX, gY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        tileH.drawImage(img, hX, hY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
+        // tileI.drawImage(img, iX, iY, tileWidth, tileHeight, 0, 0, tileWidth, tileHeight);
     }
+
+
+    document.getElementById('canvasA').addEventListener("click", function (event) {
+    event.preventDefault();
+   alert("potato");});
+
     </script>
     
     
