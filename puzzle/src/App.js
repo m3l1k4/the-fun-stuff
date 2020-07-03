@@ -5,7 +5,7 @@ import Main from "./pages/Main";
 import Game from "./pages/Game";
 import Bridge from "./pages/Bridge"
 import {Route,Switch, BrowserRouter as Router} from "react-router-dom";
-
+import html from './puzzle.html';
 
 
 class App extends React.Component {
