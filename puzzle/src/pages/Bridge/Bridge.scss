@@ -1,0 +1,42 @@
+@import "../../Variables/_fonts";
+
+.bridge {
+   
+    background-color:paleturquoise;
+     font-family: 'Spongeboy Me Bob';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    &__title {
+
+        font-family: 'Spongeboy Me Bob';
+        font-size: 74px; 
+        margin-bottom: 0;  
+    }
+
+    &__hint {
+         
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    &__text-wrapper{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 315px;
+        
+    }
+ 
+}
+
+.link {
+    text-decoration: none;
+    color: #181711;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

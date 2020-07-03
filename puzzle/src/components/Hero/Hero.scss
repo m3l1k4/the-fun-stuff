@@ -1,0 +1,44 @@
+@import "../../Variables/_fonts";
+.hero {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: palegoldenrod;
+    height: 100vh;
+    
+
+    &__button {
+
+        margin-top: 440px;
+        margin-right: 180px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 9px;
+        color: palegoldenrod;
+        width: 50px;
+        height: 50px;
+        text-decoration: none ;
+       
+    
+        &:hover {
+            background-color: #fcae49;
+        }
+    }
+
+    &__text {
+        font-size: 64px; 
+        line-height: 2;
+        width: 40%;
+        font-family: 'Spongeboy Me Bob';
+        margin-top: 295px;
+        color: plum;
+    }
+   
+}
