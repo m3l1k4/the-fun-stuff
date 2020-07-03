@@ -10,8 +10,8 @@ export default function Game() {
         <>
         <div className="header">  
              
-            <h1>Find the Puzzle</h1> 
-            <h4>Solve the Puzzle</h4>
+            <h1>Move the pieces</h1> 
+            
         </div>
         <div className="main">
             <Link className="link" to="/"><h3>back to Main</h3></Link>

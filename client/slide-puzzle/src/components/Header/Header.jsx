@@ -10,8 +10,8 @@ export default function Header() {
             
             <div className="header"> 
                     
-                    <h1>Find the Puzzle</h1> 
-                    <h4>Solve the Puzzle</h4>
+                    <h1>The Virtual Escape Room </h1> 
+                    
             </div>
             
     )

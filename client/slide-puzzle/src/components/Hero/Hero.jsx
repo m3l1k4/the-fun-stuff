@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <div className="hero">
             <h2 className="hero__text"> Hover around to find your way out</h2>
-           <Link to="game"  className="hero__button"> Reveal Puzzle</Link>
+           <Link to="manywaystocry"  className="hero__button"> Reveal Puzzle</Link>
         </div>
     )
 }

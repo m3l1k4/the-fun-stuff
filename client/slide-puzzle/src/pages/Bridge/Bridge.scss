@@ -1,0 +1,36 @@
+.bridge {
+   
+    background-color: #00fff2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    &__title {
+
+     
+        font-size: 64px;   
+    }
+
+    &__hint {
+        font-size: 34px;
+    }
+
+    &__text-wrapper{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 150px;
+        
+    }
+ 
+}
+
+.link {
+    text-decoration: none;
+    color: #181711;
+}

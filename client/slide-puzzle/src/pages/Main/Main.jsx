@@ -6,7 +6,9 @@ import Hero from "../../components/Hero";
 
 
 
+
 class Main extends React.Component {
+
 
 
     render () {
