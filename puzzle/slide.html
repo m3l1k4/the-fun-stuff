@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- non viewable is meta-->
+    <meta charset="UTF-8">
+    <meta title="author" content="Melika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+
+
+
+<body>
+    <p>Image to use:</p>
+    <img id="scream" width="450" height="450" src="id.png" alt="The Scream">
+    
+    <p>Canvas:</p>
+    <canvas id="myCanvas" width="450" height="450" style="border:1px solid #d3d3d3;" ">
+    Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    
+    <script>
+
+      
+
+
+    window.onload = function() {
+        const tileWidth="150";
+        const tileHeight="150";
+
+
+      let c = document.getElementById("myCanvas");
+      let tileA = c.getContext("2d");
+      let tileB= c.getContext("2d");
+      let tileC= c.getContext("2d");
+      let tileD= c.getContext("2d");
+      let tileE= c.getContext("2d");
+      let tileF= c.getContext("2d");
+      let tileG= c.getContext("2d");
+      let tileH= c.getContext("2d");
+      let tileI= c.getContext("2d");
+
+      let img = document.getElementById("scream");
+        tileA.drawImage(img, 0, 0, tileWidth, tileWidth, 0 , 0, tileWidth, tileWidth);
+        tileB.drawImage(img, 0, 150, tileWidth, tileHeight, 0, 150, tileWidth, tileHeight);
+        tileC.drawImage(img, 0, 300, tileWidth, tileHeight, 0, 300, tileWidth, tileHeight);
+        tileD.drawImage(img, 150,0, tileWidth, tileHeight, 150, 0, tileWidth, tileHeight);
+        tileE.drawImage(img, 300, 0, tileWidth, tileHeight, 300, 0, tileWidth, tileHeight);
+        tileF.drawImage(img, 150, 150, tileWidth, tileHeight, 150, 150, tileWidth, tileHeight);
+        tileG.drawImage(img, 300, 150, tileWidth, tileHeight, 300, 150, tileWidth, tileHeight);
+        tileH.drawImage(img, 300, 300, tileWidth, tileHeight, 300, 300, tileWidth, tileHeight);
+        tileI.drawImage(img, 150, 300, tileWidth, tileHeight, 0, 100, tileWidth, tileHeight);
+    }
+    </script>
+    
+    
+
+</body>
+<script src="slide.js"></script>
+
+</html>
