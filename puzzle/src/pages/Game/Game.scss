@@ -22,3 +22,39 @@
     color: #181711;
 }
 
+
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
+    display: table-cell;
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    // background: url(bird.png); 
+    cursor: pointer;
+  }
+  
+  .tile1 {background-position: left top;}
+  .tile2 {background-position: center top;}
+  .tile3 {background-position: right top;}
+  .tile4 {background-position: left center;}
+  .tile5 {background-position: center center;}
+  .tile6 {background-position: right center;}
+  .tile7 {background-position: left bottom;}
+  .tile8 {background-position: center bottom;}
+  .tile9 {background: white; cursor: default;}
+
+
+
+  .potato{
+      width: 500px;
+      height: 500px;
+  }
+
+
+  .puzze-div-row2,  .puzze-div-row1, .puzze-div-row3{
+    display: table-row;
+  }
+
+  .puzzle-div{
+    display: table;  
+  }

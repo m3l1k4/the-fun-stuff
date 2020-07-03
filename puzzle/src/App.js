@@ -19,6 +19,7 @@ componentDidMount(){
 axios.get(" https://api.thecatapi.com/v1/images/search")
 .then(res=>{
   this.setState({puzzlePic:res.data})
+  console.log(res.data, "res.data")
 })
 }
 
